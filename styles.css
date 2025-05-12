@@ -1,0 +1,141 @@
+/* Allgemeine Stile für die gesamte Anwendung */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Container-Stile */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Header-Stile */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Links */
+nav a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Formular- und Eingabefeld-Stile */
+form input,
+form select {
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+}
+
+/* Button-Stile */
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Fehler- und Ergebnis-Boxen */
+#error,
+#result {
+    transition: opacity 0.5s ease;
+}
+
+/* Animation für Fade-In */
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation für Pulse */
+.animate-pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    main .container {
+        padding: 1rem;
+    }
+
+    .max-w-md,
+    .max-w-2xl {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Zusätzliche Stile für das Quiz */
+#quiz label {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#quiz label:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+}
+
+/* Footer-Stile */
+footer p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
