@@ -75,7 +75,7 @@
     </footer>
 
     <script>
-        // Hardcoded exchange rates (relative to EUR, as of a hypothetical date)
+    
         const exchangeRates = {
             EUR: 1,
             USD: 1.08,
@@ -84,10 +84,10 @@
         };
 
         function convertCurrency(amount, fromCurrency, toCurrency) {
-            // Convert from source currency to EUR, then to target currency
+           
             const amountInEUR = amount / exchangeRates[fromCurrency];
             const result = amountInEUR * exchangeRates[toCurrency];
-            return result.toFixed(2); // Round to 2 decimal places
+            return result.toFixed(2); 
         }
 
         document.getElementById('currencyForm').addEventListener('submit', function(event) {
@@ -102,7 +102,7 @@
             const fromCurrency = document.getElementById('fromCurrency').value;
             const toCurrency = document.getElementById('toCurrency').value;
 
-            // Input validation
+          
             if (isNaN(amount) || amount < 0) {
                 errorDiv.textContent = 'Bitte geben Sie einen gültigen Betrag ein (größer oder gleich 0).';
                 errorDiv.classList.remove('hidden');
@@ -117,7 +117,7 @@
 
             const convertedAmount = convertCurrency(amount, fromCurrency, toCurrency);
 
-            // Display result
+           
             document.getElementById('conversionResult').textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
             resultDiv.classList.remove('hidden');
         });
